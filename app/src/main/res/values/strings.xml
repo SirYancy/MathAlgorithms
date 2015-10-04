@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Math Algorithm Executor</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="euclid">Euclid\'s Algorithm</string>
+    <string name="title_activity_euclid_algorithm">EuclidAlgorithm</string>
+    <string name="euclid_instructions">Please Enter Two Integers to Find a GCD</string>
+    <string name="forty_two">42</string>
+    <string name="run_algorithm">Run Algorithm</string>
+    <string name="a_equals">a =</string>
+    <string name="b_equals">b =</string>
+</resources>
