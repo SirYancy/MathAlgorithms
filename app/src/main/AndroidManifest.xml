@@ -20,6 +20,10 @@
             android:name=".EuclidAlgorithm"
             android:label="@string/title_activity_euclid_algorithm" >
         </activity>
+        <activity
+            android:name=".PrimeFactorFinder"
+            android:label="@string/title_activity_prime_factor_finder" >
+        </activity>
     </application>
 
 </manifest>

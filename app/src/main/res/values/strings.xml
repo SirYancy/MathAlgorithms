@@ -10,4 +10,6 @@
     <string name="run_algorithm">Run Algorithm</string>
     <string name="a_equals">a =</string>
     <string name="b_equals">b =</string>
+    <string name="title_activity_prime_factor_finder">PrimeFactorFinder</string>
+    <string name="factor_instructions">Please enter a number you want factorized.</string>
 </resources>
