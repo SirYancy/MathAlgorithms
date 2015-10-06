@@ -41,7 +41,8 @@ public class EuclidAlgorithm extends Activity {
             int b = Integer.parseInt(bString);
             if(a == 0 || b == 0){
                 Toast.makeText(this, "Zero has no GCD with anyone.", Toast.LENGTH_LONG).show();
-            }else {
+            }
+            else {
                 int result = euclidAlgorithm(a, b);
                 doOutput(result);
             }
@@ -104,7 +105,6 @@ public class EuclidAlgorithm extends Activity {
     }
 
     public static Intent getIntent(Activity from){
-        Intent intent = new Intent();
         return new Intent(from, EuclidAlgorithm.class);
     }
 }

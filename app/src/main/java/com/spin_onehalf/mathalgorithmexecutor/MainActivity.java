@@ -26,6 +26,12 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.factorize_button)
+    public void launchPrimeFactorFinderActivity(){
+        Intent intent = PrimeFactorFinder.getIntent(this);
+        startActivity(intent);
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
