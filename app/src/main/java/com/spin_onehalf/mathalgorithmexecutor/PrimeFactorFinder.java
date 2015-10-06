@@ -76,6 +76,7 @@ public class PrimeFactorFinder extends Activity {
 
         for(int i = 0; i < factors.size() + 1; i++){
             int nextFactor;
+            //This is the cheatiest bunch of cheating ever.
             try {
                 nextFactor = factors.get(i);
             }catch(Exception e){
