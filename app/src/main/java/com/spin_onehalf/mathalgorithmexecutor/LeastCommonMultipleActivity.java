@@ -9,78 +9,52 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class EuclidAlgorithm extends Activity {
+public class LeastCommonMultipleActivity extends Activity {
 
-    @Bind(R.id.euclid_a_input) EditText mAInput;
-    @Bind(R.id.euclid_b_input) EditText mBInput;
+    @Bind(R.id.lcm_a_input)EditText mAInput;
+    @Bind(R.id.lcm_b_input)EditText mBInput;
 
-    @Bind(R.id.output_box) TextView outputText;
+    @Bind(R.id.output_box)TextView mOutputText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_euclid_algorithm);
+        setContentView(R.layout.activity_least_common_multiple);
         ButterKnife.bind(this);
     }
 
-
-    @OnClick(R.id.run_euclid_button)
-    public void doEuclid(){
+    @OnClick(R.id.run_lcm_button)
+    public void doLCM(){
         String aString = mAInput.getText().toString();
         String bString = mBInput.getText().toString();
 
         if(aString.matches("") || bString.matches("")){
-            Toast.makeText(this, "You did not enter any inputs", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "You did not enter an input", Toast.LENGTH_LONG).show();
         }
         else{
             int a = Integer.parseInt(aString);
             int b = Integer.parseInt(bString);
-            int result = euclidAlgorithm(a, b);
+            int result = MathAlgorithms.leastCommonMultiple(a, b);
             doOutput(result);
         }
     }
 
     public void doOutput(int result){
-        outputText.setText("The GCD is: " + result);
+        mOutputText.setText("The LCM is: " + result);
     }
 
-    /**
-     * This method uses Euclid's Algorithm to calculate the GCD of any two integers.  Negative numbers
-     * automatically converted to their absolute value.
-     * @param a first integer
-     * @param b second integer
-     * @return the GCD of two integers.
-     */
-    private int euclidAlgorithm(int a, int b) {
-        if(a < 0 || b< 0){
-            a = Math.abs(a);
-            b = Math.abs(b);
-        }
 
-        //swap the two variables if b > a
-        if (b > a) {
-            int swap = a;
-            a = b;
-            b = swap;
-        }
-
-        if (a == 0) {
-            return b;
-        } else if (b == 0) {
-            return a;
-        } else {
-            return euclidAlgorithm(b, a % b);
-        }
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_euclid_algorithm, menu);
+        getMenuInflater().inflate(R.menu.menu_least_common_multiple, menu);
         return true;
     }
 
@@ -100,6 +74,6 @@ public class EuclidAlgorithm extends Activity {
     }
 
     public static Intent getIntent(Activity from){
-        return new Intent(from, EuclidAlgorithm.class);
+        return new Intent(from, LeastCommonMultipleActivity.class);
     }
 }

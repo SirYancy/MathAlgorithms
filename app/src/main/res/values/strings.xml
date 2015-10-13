@@ -13,4 +13,7 @@
     <string name="title_activity_prime_factor_finder">PrimeFactorFinder</string>
     <string name="factor_instructions">Please enter a number you want factorized.</string>
     <string name="prime_factorization">Prime Factorization</string>
+    <string name="lcm_string">Least Common Multiple</string>
+    <string name="title_activity_least_common_multiple">LeastCommonMultipleActivity</string>
+    <string name="lcm_instructions">Please Enter Two Integers to Find LCM</string>
 </resources>

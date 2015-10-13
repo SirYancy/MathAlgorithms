@@ -24,6 +24,10 @@
             android:name=".PrimeFactorFinder"
             android:label="@string/title_activity_prime_factor_finder" >
         </activity>
+        <activity
+            android:name=".LeastCommonMultipleActivity"
+            android:label="@string/title_activity_least_common_multiple" >
+        </activity>
     </application>
 
 </manifest>

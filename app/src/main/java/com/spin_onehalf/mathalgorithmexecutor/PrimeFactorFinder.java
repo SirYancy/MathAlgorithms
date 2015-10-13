@@ -94,7 +94,7 @@ public class PrimeFactorFinder extends Activity {
                     outputString.append(factorCount);
                     outputString.append("</small></sup>");
                     if (i < factors.size()) {
-                        outputString.append(" + ");
+                        outputString.append(" * ");
                     }
                     currentFactor = nextFactor;
                     factorCount = 1;

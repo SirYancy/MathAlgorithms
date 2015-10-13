@@ -26,6 +26,12 @@ public class MainActivity extends Activity {
         startActivity(intent);
     }
 
+    @OnClick(R.id.lcm_button)
+    public void launchLCMActivity(){
+        Intent intent = LeastCommonMultipleActivity.getIntent(this);
+        startActivity(intent);
+    }
+
     @OnClick(R.id.factorize_button)
     public void launchPrimeFactorFinderActivity(){
         Intent intent = PrimeFactorFinder.getIntent(this);
